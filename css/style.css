@@ -1,0 +1,17 @@
+body{
+    font-size: 16px;
+     font-family: 'Krub', sans-serif;  
+}
+
+.titulo{
+    text-align:center; 
+    font-size: 3.8rem; 
+}
+
+.Subtitulo{
+    text-align:center;   
+}
+
+.navegacion{
+    text-align: center;
+}
