@@ -1,9 +1,9 @@
 :root{
     --blanco: #ffffff;
     --oscuro: #212121;
-    --celeste_oscuro: #339CFF;
+    --morado: #470070;
     --celeste_claro: #0EA7E5;
-    --amarillo_claro: #F7FF00;
+    --verde: #fbff00;
     --gris: #757575;
 }
 
@@ -33,7 +33,7 @@ body{
 }
 
 .nav-bg{
-    background-color: var(--celeste_oscuro);
+    background-color: var(--morado);
     
 }
 
@@ -52,7 +52,7 @@ body{
 }
 
 .navegacion-principal a:hover{
-   background-color: var(--amarillo_claro);
+   background-color: var(--verde);
    color: var(--oscuro);
 }
 
