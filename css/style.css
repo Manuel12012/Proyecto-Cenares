@@ -1,3 +1,17 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --celeste_oscuro: #339CFF;
+    --celeste_claro: #0EA7E5;
+    --amarillo_claro: #F7FF00;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%;
+   
+}
+
 body{
     font-size: 16px;
      font-family: 'Krub', sans-serif;  
@@ -9,9 +23,26 @@ body{
 }
 
 .Subtitulo{
-    text-align:center;   
+    text-align:center;  
+    font-size: 2rem;  
 }
 
-.navegacion{
-    text-align: center;
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;
 }
+.nav-bg{
+    background-color: var(--celeste_oscuro);
+    
+}
+.navegacion-principal {
+    padding:1rem;
+    display: flex;
+    justify-content:space-between;
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+
