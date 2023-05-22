@@ -31,12 +31,14 @@ body{
     width: 120rem;
     margin: 0 auto;
 }
+
 .nav-bg{
     background-color: var(--celeste_oscuro);
     
 }
+
 .navegacion-principal {
-    padding:1rem;
+  
     display: flex;
     justify-content:space-between;
 }
@@ -44,5 +46,13 @@ body{
 .navegacion-principal a{
     color: var(--blanco);
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;  
+    padding:1rem;
+}
+
+.navegacion-principal a:hover{
+   background-color: var(--amarillo_claro);
+   color: var(--oscuro);
 }
 
