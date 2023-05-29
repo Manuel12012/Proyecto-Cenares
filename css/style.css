@@ -3,14 +3,19 @@
     --oscuro: #212121;
     --morado: #470070;
     --celeste_claro: #0EA7E5;
-    --verde: #fbff00;
+    --amarillo: #FFC300;
     --gris: #757575;
 }
 
 html{
     font-size: 62.5%;
-   
+    box-sizing: border-box;
 }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 
 body{
     font-size: 16px;
@@ -19,7 +24,7 @@ body{
 
 .titulo{
     text-align:center; 
-    font-size: 3.8rem; 
+    font-size: 4rem; 
 }
 
 .Subtitulo{
@@ -28,7 +33,7 @@ body{
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -38,9 +43,9 @@ body{
 }
 
 .navegacion-principal {
-  
     display: flex;
-    justify-content:space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navegacion-principal a{
@@ -52,7 +57,31 @@ body{
 }
 
 .navegacion-principal a:hover{
-   background-color: var(--verde);
+   background-color: var(--amarillo);
    color: var(--oscuro);
 }
 
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+      justify-content:space-between;
+    }
+}
+
+.hero{
+    background-image: url(../img/cenares_logo.png);
+    background-repeat:no-repeat;
+    height: 450px;
+    background-size:cover;
+    position: relative;
+}
+
+.contenido-hero{
+    position:absolute;
+    background-color: rgba(0,0,0, .3);
+    width: 100%;
+    height: 100%;
+
+    display:flex;
+    flex-direction: column;
+}
