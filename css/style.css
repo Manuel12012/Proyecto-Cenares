@@ -1,15 +1,17 @@
-:root{
+:root{ /* DEFINIENDO PALETA DE COLORES*/
     --blanco: #ffffff;
     --oscuro: #212121;
     --morado: #470070;
     --celeste_claro: #0EA7E5;
     --amarillo: #FFC300;
     --gris: #757575;
+    --gris-claro:#dfe9f3;
 }
 
+/* Globales */
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* HACK PARA BOX MODEL*/
 }
 
 *, *:before, *:after {
@@ -18,10 +20,21 @@ html{
 
 
 body{
-    font-size: 16px;
+    font-size: 16px; /*1 rem= 10 px*/
      font-family: 'Krub', sans-serif;  
+     background-image: linear-gradient(to top, var(--gris-claro) 0%, var(--blanco) 100%);/* DEGRADADO*/
 }
-
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/* Tipografia */
 h1{
     font-size: 4rem; 
 }
@@ -38,11 +51,8 @@ h1,h2,h3{
     text-align: center;
 }
 
-.contenedor{
-    max-width: 120rem;
-    margin: 0 auto;
-}
 
+/* Navegacion Principal*/
 .nav-bg{
     background-color: var(--morado);
     
@@ -80,6 +90,7 @@ h1,h2,h3{
     height: 450px;
     background-size:cover;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{
@@ -95,4 +106,11 @@ h1,h2,h3{
 
 .contenido-hero h2{
     color: var(--blanco);
+}
+
+
+/** SERVICIOS **/
+.servicios{
+    display: grid; /* AÑADE PROPIEDADES DE GRID*/
+    grid-template-columns: 50% 50%;
 }
