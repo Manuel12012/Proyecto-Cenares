@@ -85,7 +85,7 @@ h1,h2,h3{
 }
 
 .hero{
-    background-image: url(../img/cenares_logo.png);
+    background-image: url(../css/style.css);
     background-repeat:no-repeat;
     height: 450px;
     background-size:cover;
@@ -109,8 +109,13 @@ h1,h2,h3{
 }
 
 
+
 /** SERVICIOS **/
+
 .servicios{
     display: grid; /* AÑADE PROPIEDADES DE GRID*/
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33% 33% 33%; /* para repetir las secciones*/
+    column-gap: normal;
 }
+
+
