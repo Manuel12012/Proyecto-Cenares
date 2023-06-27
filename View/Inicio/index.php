@@ -24,7 +24,7 @@
             <a href="#">Proveedores</a>
             <a href="#">Informes</a>
             <a href="#">Pedido</a>
-            <a href="../Login/index.php">Iniciar Sesion</a>
+            <a href="../Login/inicio.php">Iniciar Sesion</a>
         </nav>
     </div>
 

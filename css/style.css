@@ -185,7 +185,7 @@ h1,h2,h3{
 
 /** CONTACTO**/
 .formulario{
-    background-color: var(--gris);
+    background-color: var(--amarillo);
     width: min( 60rem, 100%); /** Utiliza el valor mas pequeño**/
     margin: 0 auto; /** para centrar**/
     padding: 2rem;
