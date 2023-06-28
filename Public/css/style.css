@@ -261,7 +261,7 @@ h1,h2,h3{
 
 
 .formulario-login{
-    background-color: var(--morado);
+    background-color: var(--gris-claro);
     width: min( 150rem, 100%); /** Utiliza el valor mas pequeño**/
     margin: 0 auto; /** para centrar**/
     padding: 2rem;
@@ -277,5 +277,16 @@ h1,h2,h3{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--amarillo);
+    color: var(--morado);
+}
+
+.icono-login{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo-login label{
+    color: #470070;
 }
