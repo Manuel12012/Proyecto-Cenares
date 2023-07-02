@@ -1,5 +1,5 @@
 <?php
-include '../../Controller/Informes/mostrar.php';
+include '../../Controller/Pedidos/mostrar.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include '../../Controller/Informes/mostrar.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFORMES DE MEDICAMENTOS - CENARES</title>
+    <title>INFORMES DE PEDIDOS - CENARES</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" type= "text/css" href="../public/css/estilos.css">
@@ -26,7 +26,7 @@ include '../../Controller/Informes/mostrar.php';
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
             <a href="../../Views/Pedidos/index.php">Pedido</a>
-            <a href="../../Views/">Iniciar Sesion</a>
+            <a href="../Login/index.php">Iniciar Sesion</a>
         </nav>
     </div>
 
@@ -39,7 +39,7 @@ include '../../Controller/Informes/mostrar.php';
         <div class="p-3 rounded">
             <div clas="row">
                 <div class="col-12">
-                    <h4><B>INFORMES DE MEDICAMENTOS</B>
+                    <h4><B>PEDIDOS</B>
                         <br></br>
                         <a href="ingresarview.php" class="btn btn-primary float-Center">Nuevo</a>
                     </h4>
@@ -52,9 +52,11 @@ include '../../Controller/Informes/mostrar.php';
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Código</th>
-                                <th>Descripción</th>
-                                <th>Stock</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Descripcion</th>
+                                <th>Medicamento</th>
+                                <th>Cantidad</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -66,9 +68,11 @@ include '../../Controller/Informes/mostrar.php';
                             ?>
                                 <tr>
                                     <td><?php  echo $row['id']; ?> </td>
-                                    <td><?php  echo $row['codigo']; ?> </td>
-                                    <td><?php  echo $row['descripción']; ?> </td>
-                                    <td><?php  echo $row['stock']; ?> </td>
+                                    <td><?php  echo $row['nombre']; ?> </td>
+                                    <td><?php  echo $row['email']; ?> </td>
+                                    <td><?php  echo $row['descripcion']; ?> </td>
+                                    <td><?php  echo $row['medicamento']; ?> </td>
+                                    <td><?php  echo $row['cantidad']; ?> </td>
                                     <td> <a href="editarview.php?id=<?php echo $row['id'];?>"
                                     class="btn btn-warning">Editar</a></td>
                                     <td> <a href="eliminarview.php?id=<?php echo $row['id'];?>"

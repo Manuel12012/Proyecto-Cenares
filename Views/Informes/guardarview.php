@@ -1,4 +1,4 @@
-<?php include '../../Controller/guarda.php';?>
+<?php include '../../Controller/Informes/guarda.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

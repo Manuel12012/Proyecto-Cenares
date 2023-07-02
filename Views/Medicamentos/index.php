@@ -1,5 +1,5 @@
 <?php
-include '../../Controller/Informes/mostrar.php';
+include '../../Controller/Medicamentos/mostrar.php';
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ include '../../Controller/Informes/mostrar.php';
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
             <a href="../../Views/Pedidos/index.php">Pedido</a>
-            <a href="../../Views/">Iniciar Sesion</a>
+            <a href="../Login/index.php">Iniciar Sesion</a>
         </nav>
     </div>
 
@@ -39,7 +39,7 @@ include '../../Controller/Informes/mostrar.php';
         <div class="p-3 rounded">
             <div clas="row">
                 <div class="col-12">
-                    <h4><B>INFORMES DE MEDICAMENTOS</B>
+                    <h4><B>MEDICAMENTOS</B>
                         <br></br>
                         <a href="ingresarview.php" class="btn btn-primary float-Center">Nuevo</a>
                     </h4>
@@ -52,9 +52,10 @@ include '../../Controller/Informes/mostrar.php';
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Código</th>
-                                <th>Descripción</th>
-                                <th>Stock</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Fecha de Vencimiento</th>
+                                <th>Cantidad</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -66,9 +67,10 @@ include '../../Controller/Informes/mostrar.php';
                             ?>
                                 <tr>
                                     <td><?php  echo $row['id']; ?> </td>
-                                    <td><?php  echo $row['codigo']; ?> </td>
-                                    <td><?php  echo $row['descripción']; ?> </td>
-                                    <td><?php  echo $row['stock']; ?> </td>
+                                    <td><?php  echo $row['nombre']; ?> </td>
+                                    <td><?php  echo $row['tipo']; ?> </td>
+                                    <td><?php  echo $row['fechaVencimiento']; ?> </td>
+                                    <td><?php  echo $row['cantidad']; ?> </td>
                                     <td> <a href="editarview.php?id=<?php echo $row['id'];?>"
                                     class="btn btn-warning">Editar</a></td>
                                     <td> <a href="eliminarview.php?id=<?php echo $row['id'];?>"

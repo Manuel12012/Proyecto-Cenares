@@ -20,10 +20,10 @@
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
             <a href="#">Inicio</a>   
-            <a href="../Medicamentos/listaMedicamentos.php">Medicamentos</a>
-            <a href="#">Proveedores</a>
+            <a href="../../Views/Medicamentos/index.php">Medicamentos</a>
+            <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
-            <a href="">Pedido</a>
+            <a href="../../Views/Pedidos/index.php">Pedido</a>
             <a href="../Login/index.php">Iniciar Sesion</a>
         </nav>
     </div>
