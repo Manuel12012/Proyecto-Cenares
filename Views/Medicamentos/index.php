@@ -35,14 +35,14 @@ include '../../Controller/Medicamentos/mostrar.php';
         <h2 class="Subtitulo">Centro Nacional de Abastecimiento  de Recursos Estrategicos en Salud</h2>
         </div>
     </section>
-    <main class="container contenedor">
+    <main class="contenedor sombra"">
         <div class="p-3 rounded">
             <div clas="row">
                 <div class="col-12">
-                    <h4><B>MEDICAMENTOS</B>
+                    <h1> Gestion de Medicamentos
                         <br></br>
-                        <a href="ingresarview.php" class="btn btn-primary float-Center">Nuevo</a>
-                    </h4>
+                        <a href="ingresarview.php" class="boton">Nuevo</a>
+                    </h1>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@ include '../../Controller/Medicamentos/mostrar.php';
                     <table class="table table-border">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Tipo</th>
                                 <th>Fecha de Vencimiento</th>
