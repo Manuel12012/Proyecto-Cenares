@@ -27,27 +27,26 @@
             <div class="col">
                 <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
                     <div class="col-md-4">
-                        <label for="codigo" class="form-label">Código</label>
-                        <input type="text" id="codigo" name="codigo" class="form-control" 
-                        value="<?php echo $row['codigo']; ?>" required autofocus>
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" 
+                        value="<?php echo $row['nombre']; ?>" required autofocus>
                     </div>
                                         
                     <div class="col-md8">
-                        <label for="descripción" class="form-label">Descripcion</label>
-                        <input type="text" id="descripción" name="descripción" class="form-control"
-                        value ="<?php echo $row['descripción']; ?>" required>
-                    </div>                                                                                           
-
-                    <h5>Inventario</h5>
-                    <div class="col-md-12">
-                        <input type="checkbox" class="form-check-input" id="inventariable"
-                        name="inventariable" value="1">
-                        <label for="inventariable" class="form-check-label">Usa Inventario</label>                        
-                    </div>
+                        <label for="tipo" class="form-label">Tipo:</label>
+                        <input type="text" id="tipo" name="tipo" class="form-control"
+                        value ="<?php echo $row['tipo']; ?>" required>
+                    </div>  
+                    
+                    <div class="col-md8">
+                        <label for="fechaVencimiento" class="form-label">Fecha de Vencimiento:</label>
+                        <input type="datetime-local" id="datetime" name="datetime" class="form-control"
+                        value ="<?php echo $row['fechaVencimiento']; ?>" required>
+                    </div> 
 
                     <div class="col-md-4">
-                        <label for="stock" class="form-label">Cantidades- CAJAS</label>
-                        <input type="number" id="stock" name="stock"value ="<?php echo $row['stock'];?>"
+                        <label for="cantidad" class="form-label">Cantidades en CAJAS</label>
+                        <input type="cantidad" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
                         class="form-control">
                     </div>
 

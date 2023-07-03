@@ -16,8 +16,8 @@ if (isset ($_POST['id'])){
     $cantidad=$_POST['cantidad'];
     $inventariable=isset($_POST['inventariable']) ?  $_POST['inventariable'] : 0;
 
-    if($stock == ''){
-        $stock= 0;
+    if($cantidad == ''){
+        $cantidad= 0;
     }
 
     $query = $con->prepare("UPDATE pedido SET nombre=?, email=?, descripcion=?, medicamento=? 

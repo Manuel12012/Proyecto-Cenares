@@ -11,12 +11,12 @@ if (isset ($_POST['id'])){
     $id=$_POST['id'];
     $nombre=$_POST['nombre'];
     $tipo=$_POST['tipo'];
-    $fechaVencimiento=$_POST['fechaVencimiento'];
+    $fechaVencimiento=isset($_POST['fechaVencimiento']);
     $cantidad=$_POST['cantidad'];
     $inventariable=isset($_POST['inventariable']) ?  $_POST['inventariable'] : 0;
 
-    if($stock == ''){
-        $stock= 0;
+    if($cantidad == ''){
+        $cantidad= 0;
     }
 
     $query = $con->prepare("UPDATE medicamento SET nombre=?, tipo=?, fechaVencimiento=?, cantidad=? 
@@ -29,18 +29,18 @@ if (isset ($_POST['id'])){
     } else{
     $nombre= $_POST['nombre'];
     $tipo= $_POST['tipo'];
-    $fechaVencimiento= $_POST['fechaVencimiento'];
+    $fechaVencimiento=isset($_POST['fechaVencimiento']);
     $cantidad= $_POST['cantidad'];
     $inventariable=isset($_POST['inventariable']) ?  $_POST['inventariable'] : 0;
     
-    if ($stock == ''){
-        $stock= 0;
+    if ($cantidad == ''){
+        $cantidad= 0;
     }
 
     $query = $con->prepare("INSERT INTO medicamento (nombre, tipo, fechaVencimiento, cantidad,inventariable,activo)
     VALUES (:nombre, :tipo, :fechaVencimiento, :cantidad, :inventariable, 1)");
     $resultado =$query-> execute(array('nombre'=> $nombre, 'tipo'=> $tipo, 'fechaVencimiento'=> $fechaVencimiento,
-    'cantidad'=> $cantidad, 'inventariable'=>$inventariable));
+    'cantidad'=> $cantidad, 'inventariable'=> $inventariable));
 
     if ($resultado){
         $correcto= true;

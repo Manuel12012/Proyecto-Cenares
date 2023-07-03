@@ -26,7 +26,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a class="btn btn-primary" href="../Views/index.php">Regresar</a>
+                    <a class="btn btn-primary" href="index.php">Regresar</a>
                 </div>
             </div>
         </div>

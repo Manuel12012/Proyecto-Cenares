@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/estilos.css">
     <script src= "../../public/js/bootstrap.bundle.min.js"></script>
-    <img src="../img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
+    <img src="../assets/img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
 </head>
 
 
@@ -18,7 +18,7 @@
         <div class="p-3 rounded">
             <div class="row">
                 <div class="col">
-                    <h4><B>NUEVO REGISTRO</B></h4>
+                    <h4><B>NUEVO PEDIDO</B></h4>
                 </div>
             </div>
         </div>
@@ -27,27 +27,32 @@
             <div class="col">
                 <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
                     <div class="col-md-4">
-                        <label for="codigo" class="form-label">Código</label>
-                        <input type="text" id="codigo" name="codigo" class="form-control" 
-                        value="<?php echo $row['codigo']; ?>" required autofocus>
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" 
+                        value="<?php echo $row['nombre']; ?>" required autofocus>
                     </div>
                                         
                     <div class="col-md8">
-                        <label for="descripción" class="form-label">Descripcion</label>
-                        <input type="text" id="descripción" name="descripción" class="form-control"
-                        value ="<?php echo $row['descripción']; ?>" required>
-                    </div>                                                                                           
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" id="email" name="email" class="form-control"
+                        value ="<?php echo $row['email']; ?>" required>
+                    </div>  
+                    
+                    <div class="col-md8">
+                        <label for="descripcion" class="form-label">Descripcion:</label>
+                        <input type="text" id="descripcion" name="descripcion" class="form-control"
+                        value ="<?php echo $row['descripcion']; ?>" required>
+                    </div> 
 
-                    <h5>Inventario</h5>
-                    <div class="col-md-12">
-                        <input type="checkbox" class="form-check-input" id="inventariable"
-                        name="inventariable" value="1">
-                        <label for="inventariable" class="form-check-label">Usa Inventario</label>                        
-                    </div>
+                    <div class="col-md8">
+                        <label for="medicamento" class="form-label">Medicamento:</label>
+                        <input type="text" id="medicamento" name="medicamento" class="form-control"
+                        value ="<?php echo $row['medicamento']; ?>" required>
+                    </div> 
 
                     <div class="col-md-4">
-                        <label for="stock" class="form-label">Cantidades- CAJAS</label>
-                        <input type="number" id="stock" name="stock"value ="<?php echo $row['stock'];?>"
+                        <label for="cantidad" class="form-label">Cantidades en CAJAS</label>
+                        <input type="number" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
                         class="form-control">
                     </div>
 
