@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/estilos.css">
     <script src= "../../public/js/bootstrap.bundle.min.js"></script>
-    <img src="../../img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
+    <img src="../../assets/img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
 </head>
 
 
@@ -17,7 +17,7 @@
         <div class="p-3 rounded">
             <div class="row">
                 <div class="col">
-                    <h4><b>NUEVO REGISTRO</b> </h4>
+                    <h4><b>NUEVO INFORME DE MEDICAMENTOS</b> </h4>
                 </div>
             </div>
         </div>

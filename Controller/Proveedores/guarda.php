@@ -33,9 +33,7 @@ if (isset ($_POST['id'])){
     $email= $_POST['email'];
     $inventariable=isset($_POST['inventariable']) ?  $_POST['inventariable'] : 0;
     
-    if ($stock == ''){
-        $stock= 0;
-    }
+
 
     $query = $con->prepare("INSERT INTO proveedor (nombre, direccion, telefono, email,inventariable,activo)
     VALUES (:nombre, :direccion, :telefono, :email, :inventariable, 1)");

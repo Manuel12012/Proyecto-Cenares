@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CENARES</title>
+    <title>INICIO-CENARES</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
             <a href="../../Views/Pedidos/index.php">Pedido</a>
-            <a href="../Login/index.php">Iniciar Sesion</a>
+            <a href="../../Views/Login/index.php">Iniciar Sesion</a>
         </nav>
     </div>
 
@@ -123,7 +123,7 @@
             </section>
      
     
-        <section>
+        <section class="servicio">
             <h2>Contacto</h2>
             <form class="formulario">
                 <fieldset>

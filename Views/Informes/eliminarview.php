@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/estilos.css">
     <script src= "../../public/js/bootstrap.bundle.min.js"></script>
-    <img src="../../img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
+    <img src="../../assets/img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
 </head>
 <body class="py-3">
     <main class="container contenedor">
@@ -26,7 +26,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a class="btn btn-primary" href="../Views/index.php">Regresar</a>
+                    <a class="btn btn-primary" href="index.php">Regresar</a>
                 </div>
             </div>
         </div>
