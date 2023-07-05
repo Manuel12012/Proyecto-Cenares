@@ -1,41 +1,20 @@
 <?php
-require_once 'Model/UsuarioModelo.php';
-
-class UsuarioController {
-    public function inicio() {
-        session_start();
-        if (isset($_SESSION['dni'])) {
-            header('Location: bienvenido.php');
-            exit();
-        }
-        require_once 'Views/Iniciarsesion/inicio.php';
+if(!empty($_POST["btningresar"])){
+    if(empty($_POST["usuario"]) and empty($_POST["password"])){
+        echo 'Los campos estan vacios';
     }
+    else {
+        $usuario=$_POST["usuario"];
+        $clave=$_POST["password"];
+        $sql=$conexion->query("SELECT * FROM usuario WHERE usuario='$usuario' AND clave='$clave'");
 
-    public function iniciarSesion() {
-        session_start();
-        $dni = $_POST['dni'];
-        $contraseña = $_POST['contraseña'];
-        
-        $modelo = new UsuarioModelo();
-        $valido = $modelo->validarCredenciales($dni, $contraseña);
-        
-        if ($valido) {
-            $_SESSION['dni'] = $dni;
-            header('Location: bienvenido.php');
-            exit();
-        } else {
-            $mensaje = "Credenciales inválidas";
-            require_once 'Views/Iniciarsesion/inicio.php';
+        if($datos=$sql->fetch_object()){
+            header("location:Views/Inicio/index.php");
         }
-    }
 
-    public function cerrarSesion() {
-        session_start();
-        session_unset();
-        session_destroy();
-        header('Location: index.php');
-        exit();
+        else{
+            echo 'Acceso denegado';
+        }
     }
 }
 ?>
-

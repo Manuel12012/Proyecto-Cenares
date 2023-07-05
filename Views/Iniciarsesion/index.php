@@ -1,0 +1,24 @@
+<?php 
+include ("../../Model/database.php");
+include ("../../Controller/UsuarioController.php");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <h2>Inicio de sesión</h2>
+    <form method="post" action="../../Views/InicioAdmin/index.php">
+        <label for="usuario">Nombre de usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" name="btningresar" value="Iniciar sesión">
+    </form>
+</body>
+</html>
+

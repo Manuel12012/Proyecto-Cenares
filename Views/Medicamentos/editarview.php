@@ -25,7 +25,7 @@
 
         <div class="row">
             <div class="col">
-                <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
+            <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
                     <div class="col-md-4">
                         <label for="nombre" class="form-label">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" 
@@ -46,7 +46,7 @@
 
                     <div class="col-md-4">
                         <label for="cantidad" class="form-label">Cantidades en CAJAS</label>
-                        <input type="number" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
+                        <input type="cantidad" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
                         class="form-control">
                     </div>
 

@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         $query = $con->prepare("INSERT INTO medicamento (nombre, tipo, fechaVencimiento, cantidad, activo)
-            VALUES (:nombre, :tipo, :fechaVencimiento, cantidad, 1)");
+            VALUES (:nombre, :tipo, :fechaVencimiento, :cantidad, 1)");
         $resultado = $query->execute(['nombre' => $nombre, 'tipo' => $tipo, 'fechaVencimiento' => $fechaVencimiento, 'cantidad' => $cantidad]);
 
         if ($resultado) {
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Obtener todos los informes
-$comando = $con->prepare("SELECT id, nombre, tipo, fechaVencimiento, cantidad FROM medicamento WHERE activo = :mi_activo ORDER BY nombre ASC");
+$comando = $con->prepare("SELECT id, nombre, tipo, fechaVencimiento, cantidad FROM medicamento WHERE activo = :mi_activo ORDER BY id ASC");
 $comando->execute(['mi_activo' => $activo]);
 $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
 
