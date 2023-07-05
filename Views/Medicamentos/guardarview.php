@@ -1,4 +1,4 @@
-<?php include '../../Controller/Medicamentos/guarda.php';?>
+<?php include '../../Controller/MedicamentosController.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
