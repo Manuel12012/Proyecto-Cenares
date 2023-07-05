@@ -1,0 +1,32 @@
+body {
+  background-color: #ffffff; /* Color de fondo del cuerpo*/ 
+
+}
+
+.container-imagen {
+    width: 300px; /* Ancho deseado del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    border: 1px solid #ccc; /* Borde del contenedor */
+    border-radius: 4px; /* Bordes redondeados del contenedor */
+    padding: 10px; /* Espaciado interno del contenedor */
+}
+.contenainer-imagen img {
+  width: 100%; /* Ajustar la imagen al ancho del contenedor */
+  height: auto; /* Mantener la proporción de aspecto de la imagen */
+  display: block; /* Asegurarse de que la imagen sea un bloque */
+  border-radius: 4px; /* Bordes redondeados de la imagen */
+}
+.container {
+    background-color: #16bdeb; /* Color de fondo del contenedor */
+    padding:120px; /* Espaciado interno del contenedor */
+    margin: 100px auto; /* Margen exterior del contenedor */
+    max-width: 2000px; /* Ancho máximo del contenedor */
+    border: 5px solid #cccccc; /* Borde del contenedor */
+    border-radius: 6px; /* Bordes redondeados del contenedor */
+ }
+
+ label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}

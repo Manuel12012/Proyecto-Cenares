@@ -1,0 +1,12 @@
+.DS_Store
+build/
+dist/
+
+*.pyc #para quitar archivos en este caso es python
+
+*.db 
+
+*.env  # son contraseñas imnportantes siempre hacerlo
+.env/  # son contraseñas imnportantes siempre hacerlo
+
+*.exe 
