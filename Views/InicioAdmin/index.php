@@ -20,12 +20,12 @@
     </header>
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="../Inicio/index.php">Inicio</a>   
+            <a href="../../Views/InicioAdmin/index.php">Inicio</a>   
             <a href="../../Views/Medicamentos/index.php">Medicamentos</a>
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
             <a href="../../Views/Pedidos/index.php">Pedido</a>
-            <a href="../../Views/Iniciarsesion/index.php">Iniciar Sesion</a>
+            <a href="../../Views/InicioUsuario/index.php">Cerrar Sesion</a>
         </nav>
     </div>
 
@@ -136,44 +136,6 @@
                 </p>
             </section>
     
-        <section class="servicio">
-            <h2>Pedido</h2>
-            <form class="formulario" action="guardarview.php" method="POST">
-            <fieldset>
-                <legend>Realiza tu pedido llenando todos los campos</legend> 
-
-            <div class="contenedor-campos">
-            <div class="campo"> 
-                <label for="nombre">Nombre:</label>
-                <input class="input-text" id="nombre" name="nombre" type="text" placeholder="Tu Nombre" required> 
-            </div>
-
-            <div class="campo">
-                <label>Email:</label>
-                <input class="input-text" id="email" name="email" type="text" placeholder="Tu Email" required>
-            </div>
-
-            <div class="campo">
-                <label>Medicamento(s):</label>
-                <input class="input-text" id="medicamento" name="medicamento" type="text" placeholder="Ingrese el medicamento" required>
-            </div>
-
-            <div class="campo">
-                <label>Cantidad en cajas:</label>
-                <input class="input-text" id="cantidad" name="cantidad" type="number" placeholder="Ingrese la cantidad en cajas" required>
-            </div>
-
-            <div class="campo">
-                <label>Descripcion:</label>
-                <textarea class="input-text" id="descripcion" name="descripcion" required></textarea> 
-            </div>
-        </div> <!--.contenedor-campos -->
-
-        <div class="alinear-derecha flex">
-        <button type="submit" class="boton" name="registro">Enviar</button>
-        </div>
-    </fieldset>
-</form>
 
 
         </section>

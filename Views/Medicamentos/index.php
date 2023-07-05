@@ -28,12 +28,12 @@ include '../../Controller/MedicamentosController.php';
     </header>
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="../../Views/Inicio/index.php">Inicio</a>   
+            <a href="../../Views/InicioAdmin/index.php">Inicio</a>   
             <a href="../../Views/Medicamentos/index.php">Medicamentos</a>
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
             <a href="../../Views/Pedidos/index.php">Pedido</a>
-            <a href="../Login/index.php">Iniciar Sesion</a>
+            <a href="../../Views/InicioUsuario/index.php">Cerrar Sesion</a>
         </nav>
     </div>
 
