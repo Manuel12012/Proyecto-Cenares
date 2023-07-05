@@ -72,4 +72,5 @@ $comando = $con->prepare("SELECT id, codigo, descripción, stock FROM informes W
 $comando->execute(['mi_activo' => $activo]);
 $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+
 ?>
