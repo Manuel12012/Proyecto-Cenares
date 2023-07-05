@@ -27,7 +27,7 @@ include '../../Controller/PedidosController.php';
     </header>
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="../../Views/Inicio/index.php">Inicio</a>   
+            <a href="../../Views/InicioAdmin/index.php">Inicio</a>   
             <a href="../../Views/Medicamentos/index.php">Medicamentos</a>
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>

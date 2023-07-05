@@ -25,7 +25,7 @@
 
         <div class="row">
             <div class="col">
-            <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
+            <form class="row g-3" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" autocomplete="off">
                     <div class="col-md-4">
                         <label for="nombre" class="form-label">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" 
@@ -40,13 +40,13 @@
                     
                     <div class="col-md8">
                         <label for="fechaVencimiento" class="form-label">Fecha de Vencimiento:</label>
-                        <input type="datetime-local" id="datetime" name="datetime" class="form-control"
+                        <input type="datetime-local" id="fechaVencimiento" name="fechaVencimiento" class="form-control"
                         value ="<?php echo $row['fechaVencimiento']; ?>" required>
                     </div> 
 
                     <div class="col-md-4">
                         <label for="cantidad" class="form-label">Cantidades en CAJAS</label>
-                        <input type="cantidad" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
+                        <input type="number" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
                         class="form-control">
                     </div>
 

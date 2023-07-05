@@ -1,4 +1,4 @@
-<?php require '../../Controller/informesController.php'; ?>
+<?php require_once '../../Controller/informesController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
         <div class="p-3 rounded">
             <div class="row">
                 <div class="col">
-                    <h4><B>NUEVO REGISTRO</B></h4>
+                    <h4><B>EDITANDO REGISTRO</B></h4>
                 </div>
             </div>
         </div>

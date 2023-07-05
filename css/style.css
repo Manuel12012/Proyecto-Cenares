@@ -114,8 +114,10 @@ h1,h2,h3{
 @media (min-width: 768px) {
     .navegacion-principal{
         flex-direction: row;
-      justify-content:space-between;
+      justify-content:space-around;
     }
+
+   
 }
 
 .hero{
@@ -240,4 +242,22 @@ h1,h2,h3{
 /**FOOTER*/
 .footer{
     text-align: center;
+}
+
+
+.contenedor-campos-login{
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    /* grid-template-rows: auto auto auto 20rem; */
+    column-gap: 1rem;
+}
+
+.servicio .icono-login{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--gris-claro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

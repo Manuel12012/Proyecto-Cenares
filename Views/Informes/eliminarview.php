@@ -1,4 +1,4 @@
-<?php include '../../Controller/informesController.php';?>
+<?php require_once '../../Controller/informesController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

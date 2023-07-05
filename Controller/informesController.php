@@ -7,7 +7,7 @@ $con = $db->conectar();
 
 $activo = 1;
 
-$numElimina = 0; // Initialize the variable
+$numElimina = 0; // Inicializa la variable
 
 // Obtener informe por ID
 if (isset($_GET['id'])) {
@@ -37,7 +37,6 @@ if (isset($_POST['delete_id'])) {
 
 $correcto = false;
 
-
 // Actualizar o agregar informe
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $codigo = $_POST['codigo'];
@@ -52,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['id'])) {
         $id = $_POST['id'];
 
-        $query = $con->prepare("UPDATE informes SET codigo = ?, descripción = ?, inventariable = ?, stock = ? WHERE id = ?");
-        $resultado = $query->execute([$codigo, $descripcion, $inventariable, $stock, $id]);
+        $query = $con->prepare("UPDATE informes SET codigo = :codigo, descripción = :descripcion, inventariable = :inventariable, stock = :stock WHERE id = :id");
+        $resultado = $query->execute(['codigo' => $codigo, 'descripcion' => $descripcion, 'inventariable' => $inventariable, 'stock' => $stock, 'id' => $id]);
 
         if ($resultado) {
             $correcto = true;
@@ -61,8 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $query = $con->prepare("INSERT INTO informes (codigo, descripción, inventariable, stock, activo)
             VALUES (:codigo, :descripcion, :inventariable, :stock, 1)");
-        $resultado = $query->execute(['codigo' => $codigo, 'descripcion' => $descripcion, 
-        'inventariable' => $inventariable, 'stock' => $stock]);
+        $resultado = $query->execute(['codigo' => $codigo, 'descripcion' => $descripcion, 'inventariable' => $inventariable, 'stock' => $stock]);
 
         if ($resultado) {
             $correcto = true;
@@ -75,6 +73,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $comando = $con->prepare("SELECT id, codigo, descripción, stock FROM informes WHERE activo = :mi_activo ORDER BY id ASC");
 $comando->execute(['mi_activo' => $activo]);
 $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
-
 
 ?>

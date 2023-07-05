@@ -1,4 +1,4 @@
-<?php require '../../Controller/Pedidos/editar.php'; ?>
+<?php require '../../Controller/PedidosController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -37,7 +37,7 @@
 
                     <div class="col-md-8">
                         <label for="fechaVencimiento" class="form-label">Fecha de vencimiento:</label>
-                        <input type="datetime-local" id="datetime" name="datetime" class="form-control" required>
+                        <input type="datetime-local" id="fechaVencimiento" name="fechaVencimiento" class="form-control" required>
                     </div>
 
                     <div class="col-md-4">

@@ -20,7 +20,7 @@
     </header>
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="../Inicio/index.php">Inicio</a>   
+            <a href="../../Views/InicioUsuario/index.php">Inicio</a>   
             <a href="../../Views/Iniciarsesion/index.php">Iniciar Sesion</a>
         </nav>
     </div>

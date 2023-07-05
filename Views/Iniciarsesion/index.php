@@ -7,64 +7,68 @@
 
    <link rel="stylesheet" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-   <!-- <link rel="stylesheet" href="css/all.min.css"> -->
-   <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
-   <link href="https://tresplazas.com/web/img/big_punto_de_venta.png" rel="shortcut icon">
+   <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="../../css/style.css" as="style">
+    <link href="../../css/style.css" rel="stylesheet">
+   
    <title>Inicio de sesión</title>
 </head>
 
 <body>
-   <img class="wave" src="img/wave.png">
-   <div class="container">
-      <div class="img">
-         <img src="img/bg.svg">
-      </div>
-      <div class="login-content">
-         <form method="post" action="">
-            <img src="img/avatar.svg">
-            <h2 class="title">BIENVENIDO</h2>
+<header>   
+        <h1 class="titulo">CENARES</h1>
+    </header>    
+           
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="../../Views/InicioUsuario/index.php">Inicio</a>   
+            <a href="../../Views/Iniciarsesion/index.php">Iniciar Sesion</a>
+        </nav>
+    </div>
+            <section class="hero">
+        <div class="contenido-hero">
+        <h2 class="Subtitulo">Centro Nacional de Abastecimiento  de Recursos Estrategicos en Salud</h2>
+        </div>
+    </section>
+    
             <?php
             include ('../../Model/database.php');
             include ('../../Controller/UsuarioController.php');
              ?>
-            <div class="input-div one">
-               <div class="i">
-                  <i class="fas fa-user"></i>
-               </div>
-               <div class="div">
-                  <h5>Usuario</h5>
-                  <input id="usuario" type="text" class="input" name="usuario">
-               </div>
-            </div>
-            <div class="input-div pass">
-               <div class="i">
-                  <i class="fas fa-lock"></i>
-               </div>
-               <div class="div">
-                  <h5>Contraseña</h5>
-                  <input type="password" id="input" class="input" name="password">
-               </div>
-            </div>
-            <div class="view">
-               <div class="fas fa-eye verPassword" onclick="vista()" id="verPassword"></div>
-            </div>
+            <main class="contenedor sombra">
+            <form method="post" action="" class="formulario">
+            <fieldset>
+            <legend>Bienvenido</legend> 
 
-            <div class="text-center">
-               <a class="font-italic isai5" href="">Olvidé mi contraseña</a>
-               <a class="font-italic isai5" href="">Registrarse</a>
-            </div>
-            <input name="btningresar" class="btn" type="submit" value="INICIAR SESION">
-         </form>
-      </div>
-   </div>
-   <script src="js/fontawesome.js"></script>
-   <script src="js/main.js"></script>
-   <script src="js/main2.js"></script>
-   <script src="js/jquery.min.js"></script>
-   <script src="js/bootstrap.js"></script>
-   <script src="js/bootstrap.bundle.js"></script>
+            <section class="servicio">   
+            <div class="icono-login">
+                    <svg fill="#000000" width="130px" height="130px" viewBox="0 0 24 24" id="user-6" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="secondary" d="M13,12H11a8,8,0,0,0-8,8,2,2,0,0,0,2,2H19a2,2,0,0,0,2-2A8,8,0,0,0,13,12Z" style="fill: #2ca9bc;"></path><circle id="primary" cx="12" cy="8" r="6" style="fill: #000000;"></circle></g></svg>               <div class="div">
+                  </div>
+                </section> 
+                <div class="contenedor-campos-login">
+                <div class="campo">
+                        <label>Usuario:</label>
+                            <input id="usuario" type="text" class="input-text" name="usuario" placeholder="Ingrese usuario">
+               </div>
+                    <div class="campo">
+                        <label>Contraseña:</label>
+                            <input type="password" id="input" class="input-text" name="password" placeholder="Ingrese contraseña">
+                    </div>
+                </div>
+            <input name="btningresar" class="boton" type="submit" value="INICIAR SESION">
+         
+        </form>
 
+  <fieldset></fieldset>
+</main>
+
+<footer class="footer">
+            <p>Todos los derechos reservados.</p>
+        </footer>
 </body>
 
 </html>

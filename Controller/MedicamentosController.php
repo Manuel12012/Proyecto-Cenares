@@ -41,7 +41,7 @@ $correcto = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
     $tipo = $_POST['tipo'];
-    $fechaVencimiento = isset($_POST['fechaVencimiento']) ? $_POST['fechaVencimiento'] : '';
+    $fechaVencimiento = isset($_POST['fechaVencimiento']) ? $_POST['fechaVencimiento']:'';
 
     $cantidad = $_POST['cantidad'];
 
@@ -52,8 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['id'])) {
         $id = $_POST['id'];
 
-        $query = $con->prepare("UPDATE medicamento SET nombre = ?, tipo = ?, fechaVencimiento = ?, cantidad = cantidad WHERE id = ?");
+        $query = $con->prepare("UPDATE medicamento SET nombre = ?, tipo = ?, fechaVencimiento = ?, cantidad = ? WHERE id = ?");
         $resultado = $query->execute([$nombre, $tipo, $fechaVencimiento, $cantidad, $id]);
+        
+
 
         if ($resultado) {
             $correcto = true;
