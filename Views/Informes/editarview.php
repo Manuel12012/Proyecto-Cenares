@@ -25,18 +25,18 @@
 
         <div class="row">
             <div class="col">
-                <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
-                    <div class="col-md-4">
-                        <label for="codigo" class="form-label">Código</label>
-                        <input type="text" id="codigo" name="codigo" class="form-control" 
-                        value="<?php echo $row['codigo']; ?>" required autofocus>
-                    </div>
+                <form class="row g-3" method="POST" autocomplete="off">
+                <div class="col-md-4">
+            <label for="codigo" class="form-label">Código</label>
+            <input type="text" id="codigo" name="codigo" class="form-control" 
+            value="<?php echo isset($row['codigo']) ? $row['codigo'] : ''; ?>" required autofocus>
+        </div>
                                         
-                    <div class="col-md8">
-                        <label for="descripción" class="form-label">Descripcion</label>
-                        <input type="text" id="descripción" name="descripción" class="form-control"
-                        value ="<?php echo $row['descripción']; ?>" required>
-                    </div>                                                                                           
+        <div class="col-md8">
+            <label for="descripción" class="form-label">Descripcion</label>
+            <input type="text" id="descripción" name="descripción" class="form-control"
+            value ="<?php echo isset($row['descripción']) ? $row['descripción'] : ''; ?>" required>
+        </div>                                                                                          
 
                     <h5>Inventario</h5>
                     <div class="col-md-12">
