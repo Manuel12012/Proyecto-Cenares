@@ -1,4 +1,4 @@
-<?php require '../../Controller/Informes/editar.php'; ?>
+<?php require '../../Controller/informesController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
