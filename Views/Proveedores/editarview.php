@@ -1,4 +1,4 @@
-<?php require '../../Controller/Proveedores/editar.php'; ?>
+<?php require '../../Controller/ProveedoresController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/estilos.css">
     <script src= "../../public/js/bootstrap.bundle.min.js"></script>
-    <img src="../img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
+    <img src="../../assets/img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
 </head>
 
 
@@ -27,27 +27,26 @@
             <div class="col">
                 <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
                     <div class="col-md-4">
-                        <label for="codigo" class="form-label">Código</label>
-                        <input type="text" id="codigo" name="codigo" class="form-control" 
-                        value="<?php echo $row['codigo']; ?>" required autofocus>
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" 
+                        value="<?php echo $row['nombre']; ?>" required autofocus>
                     </div>
                                         
                     <div class="col-md8">
-                        <label for="descripción" class="form-label">Descripcion</label>
-                        <input type="text" id="descripción" name="descripción" class="form-control"
-                        value ="<?php echo $row['descripción']; ?>" required>
-                    </div>                                                                                           
-
-                    <h5>Inventario</h5>
-                    <div class="col-md-12">
-                        <input type="checkbox" class="form-check-input" id="inventariable"
-                        name="inventariable" value="1">
-                        <label for="inventariable" class="form-check-label">Usa Inventario</label>                        
-                    </div>
+                        <label for="direccion" class="form-label">Direccion:</label>
+                        <input type="text" id="direccion" name="direccion" class="form-control"
+                        value ="<?php echo $row['direccion']; ?>" required>
+                    </div>  
+                    
+                    <div class="col-md8">
+                        <label for="telefono" class="form-label">Telefono:</label>
+                        <input type="text" id="telefono" name="telefono" class="form-control"
+                        value ="<?php echo $row['telefono']; ?>" required>
+                    </div>  
 
                     <div class="col-md-4">
-                        <label for="stock" class="form-label">Cantidades- CAJAS</label>
-                        <input type="number" id="stock" name="stock"value ="<?php echo $row['stock'];?>"
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="text" id="email" name="email"value ="<?php echo $row['email'];?>"
                         class="form-control">
                     </div>
 

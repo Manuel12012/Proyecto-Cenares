@@ -7,6 +7,8 @@ $con = $db->conectar();
 
 $activo = 1;
 
+$numElimina = 0;
+
 // Obtener informe por ID
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

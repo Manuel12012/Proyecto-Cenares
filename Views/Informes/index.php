@@ -68,16 +68,16 @@ include '../../Controller/informesController.php';
 
                         <tbody>
                             <?php
-                            foreach($resultado as $informe){
+                            foreach($resultado as $row){
                             ?>
                                 <tr>
-                                    <td><?php  echo $informe['id']; ?> </td>
-                                    <td><?php  echo $informe['codigo']; ?> </td>
-                                    <td><?php  echo $informe['descripción']; ?> </td>
-                                    <td><?php  echo $informe['stock']; ?> </td>
-                                    <td> <a href="editarview.php?id=<?php echo $informe['id'];?>"
+                                    <td><?php  echo $row['id']; ?> </td>
+                                    <td><?php  echo $row['codigo']; ?> </td>
+                                    <td><?php  echo $row['descripción']; ?> </td>
+                                    <td><?php  echo $row['stock']; ?> </td>
+                                    <td> <a href="editarview.php?id=<?php echo $row['id'];?>"
                                     class="btn btn-warning">Editar</a></td>
-                                    <td> <a href="eliminarview.php?id=<?php echo $informe['id'];?>"
+                                    <td> <a href="eliminarview.php?id=<?php echo $row['id'];?>"
                                     class="btn btn-warning">Eliminar</a></td>                                    
                                 </tr>
                             <?php } ?>

@@ -1,4 +1,4 @@
-<?php require '../../Controller/Medicamentos/editar.php'; ?>
+<?php require '../../Controller/MedicamentosController.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +46,7 @@
 
                     <div class="col-md-4">
                         <label for="cantidad" class="form-label">Cantidades en CAJAS</label>
-                        <input type="cantidad" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
+                        <input type="number" id="cantidad" name="cantidad" value ="<?php echo $row['cantidad'];?>"
                         class="form-control">
                     </div>
 

@@ -1,4 +1,4 @@
-<?php include '../../Controller/Informes/eliminar.php';?>
+<?php include '../../Controller/informesController.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

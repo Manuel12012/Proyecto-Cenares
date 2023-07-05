@@ -1,4 +1,4 @@
-<?php include '../../Controller/Proveedores/guarda.php';?>
+<?php include '../../Controller/ProveedoresController.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
