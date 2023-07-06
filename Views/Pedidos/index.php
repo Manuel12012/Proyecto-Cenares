@@ -46,8 +46,7 @@ include '../../Controller/PedidosController.php';
             <div clas="row">
                 <div class="col-12">
                     <h1>Gestion de Pedidos
-                        <br></br>
-                        <a href="ingresarview.php" class="boton">Nuevo</a>
+                        
                     </h1>
                 </div>
             </div>
