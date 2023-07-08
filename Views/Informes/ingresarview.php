@@ -31,8 +31,8 @@
                     </div>
                     
                     <div class="col-md-8">
-                        <label for="descripción" class="form-label">Descripción</label>
-                        <input type="text" id="descripción" name="descripción" class="form-control" required>
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <input type="text" id="descripcion" name="descripcion" class="form-control" required>
                     </div>
 
                     <h5>Inventario</h5>

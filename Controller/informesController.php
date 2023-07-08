@@ -27,11 +27,11 @@ if (isset($_GET['id'])) {
 }
 
 // Eliminar informe por ID
-if (isset($_POST['delete_id'])) {
-    $deleteId = $_POST['delete_id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
     $query = $con->prepare("DELETE FROM informes WHERE id = ?");
-    $query->execute([$deleteId]);
+    $query->execute([$id]);
     $numElimina = $query->rowCount();
 }
 
@@ -40,7 +40,7 @@ $correcto = false;
 // Actualizar o agregar informe
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $codigo = $_POST['codigo'];
-    $descripcion = $_POST['descripción'];
+    $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
     $stock = $_POST['stock'];
     $inventariable = isset($_POST['inventariable']) ? $_POST['inventariable'] : 0;
 
@@ -48,8 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stock = 0;
     }
 
-    if (isset($_POST['id'])) {
-        $id = $_POST['id'];
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
 
         $query = $con->prepare("UPDATE informes SET codigo = :codigo, descripción = :descripcion, inventariable = :inventariable, stock = :stock WHERE id = :id");
         $resultado = $query->execute(['codigo' => $codigo, 'descripcion' => $descripcion, 'inventariable' => $inventariable, 'stock' => $stock, 'id' => $id]);

@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/estilos.css">
-    <script src= "../../public/js/bootstrap.bundle.min.js"></script>
-    <img src="../../assets/img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
+    <script src= "../public/js/bootstrap.bundle.min.js"></script>
+    <img src="../img/cenares.jpg" alt="SISTEMA DE ABASTECIMIENTO CENARES">
 </head>
 
 
@@ -18,25 +18,25 @@
         <div class="p-3 rounded">
             <div class="row">
                 <div class="col">
-                    <h4><B>EDITANDO REGISTRO</B></h4>
+                    <h4><B>NUEVO REGISTRO</B></h4>
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col">
-                <form class="row g-3" method="POST" autocomplete="off">
-                <div class="col-md-4">
-            <label for="codigo" class="form-label">Código</label>
-            <input type="text" id="codigo" name="codigo" class="form-control" 
-            value="<?php echo isset($row['codigo']) ? $row['codigo'] : ''; ?>" required autofocus>
-        </div>
+            <form class="row g-3" method="POST" action="guardarview.php" autocomplete="off">
+    <div class="col-md-4">
+        <label for="codigo" class="form-label">Código</label>
+        <input type="text" id="codigo" name="codigo" class="form-control" 
+        value="<?php echo isset($row['codigo']) ? $row['codigo'] : ''; ?>" required autofocus>
+    </div>
                                         
-        <div class="col-md8">
-            <label for="descripción" class="form-label">Descripcion</label>
-            <input type="text" id="descripción" name="descripción" class="form-control"
-            value ="<?php echo isset($row['descripción']) ? $row['descripción'] : ''; ?>" required>
-        </div>                                                                                          
+    <div class="col-md-8">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <input type="text" id="descripcion" name="descripcion" class="form-control"
+        value="<?php echo isset($row['descripcion']) ? $row['descripcion'] : ''; ?>" required>
+    </div>                                                                                         
 
                     <h5>Inventario</h5>
                     <div class="col-md-12">
