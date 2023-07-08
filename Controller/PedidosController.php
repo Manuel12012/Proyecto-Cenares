@@ -27,11 +27,11 @@ if (isset($_GET['id'])) {
 }
 
 // Eliminar informe por ID
-if (isset($_POST['delete_id'])) {
-    $deleteId = $_POST['delete_id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
     $query = $con->prepare("DELETE FROM pedido WHERE id = ?");
-    $query->execute([$deleteId]);
+    $query->execute([$id]);
     $numElimina = $query->rowCount();
 }
 
@@ -44,10 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion']:'';
     $medicamento = $_POST['medicamento'];
     $cantidad = $_POST['cantidad'];
-
-    if ($cantidad == '') {
-        $cantidad = 0;
-    }
 
     if (isset($_POST['id'])) {
         $id = $_POST['id'];

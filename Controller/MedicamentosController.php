@@ -26,11 +26,11 @@ if (isset($_GET['id'])) {
 }
 
 // Eliminar medicamento por ID
-if (isset($_POST['delete_id'])) {
-    $deleteId = $_POST['delete_id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
     $query = $con->prepare("DELETE FROM medicamento WHERE id = ?");
-$query->execute([$deleteId]);
+$query->execute([$id]);
 
     $numElimina = $query->rowCount();
 }
