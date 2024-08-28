@@ -124,7 +124,7 @@ h1,h2,h3{
     background-image: url(../assets/img/cenares_logo.png);
     background-repeat:no-repeat;
     height: 450px;
-    background-size:cover;
+    background-size:contain;
     position: relative;
     margin-bottom: 2rem;
 }

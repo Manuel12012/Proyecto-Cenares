@@ -32,6 +32,7 @@ include '../../Controller/ProveedoresController.php';
             <a href="../../Views/Proveedores/index.php">Proveedores</a>
             <a href="../../Views/Informes/index.php">Informes</a>
             <a href="../../Views/Pedidos/index.php">Pedido</a>
+
             <a href="../../Views/InicioUsuario/index.php">Cerrar Sesion</a>
         </nav>
     </div>
